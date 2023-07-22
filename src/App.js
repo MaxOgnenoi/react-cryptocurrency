@@ -1,16 +1,19 @@
 import "./styles.css"
-import { Rouse, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Currencies from "./pages/Currencies"
 import Main from "./pages/Main"
 import Price from "./pages/Price"
+import Nav from "./components/Nav"
 
 export default function App(props) {
   return (
-    <div className='App'>
+    <div className="App">
+      <Nav />
       <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='/currencies' element={<Currencies />} />
-        <Route path='/price' element={<Price />} />
-      </Routes> </div>
+        <Route path="/" element={<Main />} />
+        <Route path="/currencies" element={<Currencies />} />
+        <Route path="/price" element={<Price />} />
+      </Routes>
+    </div>
   )
 }
